@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
-import {firebase} from '../services';
+import { firebase } from '../services';
 
 export function useIsSignedIn() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -13,5 +13,5 @@ export function useIsSignedIn() {
     return () => unregisterAuthObserver();
   }, []);
 
-  return {isSignedIn, setIsSignedIn};
+  return { isSignedIn, setIsSignedIn };
 }
