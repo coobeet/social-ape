@@ -20,6 +20,8 @@
     }
   },
   "rules": {
+    "indent": ["error", 2],
+    "object-curly-spacing": ["error", "always"],
     "require-jsdoc": "off",
     "react/react-in-jsx-scope": "off"
   }
