@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import { firebase } from '../services';
+import firebase from '../services/firebase';
 
-export function useIsSignedIn() {
+export default function useIsSignedIn() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {

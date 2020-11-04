@@ -1,6 +1,6 @@
-import { firebase } from '../services/firebase';
+import firebase from '../services/firebase';
 
-export const firebaseUiConfig = {
+const firebaseAuthConfig = {
   signInFlow: 'popup',
   signInSuccessUrl: '/home',
   signInOptions: [
@@ -11,3 +11,5 @@ export const firebaseUiConfig = {
     signInSuccessWithAuthResult: () => false,
   },
 };
+
+export default firebaseAuthConfig;

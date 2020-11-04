@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import { firebase } from '../../services';
+import firebase from '../../services/firebase';
 
 export default async (_req: NextApiRequest, res: NextApiResponse) => {
   const querySnapshot = await firebase.firestore().collection('tweets').get();

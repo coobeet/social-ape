@@ -1,9 +1,9 @@
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import Button from '@material-ui/core/Button';
 
-import { firebase } from '../services';
-import { firebaseUiConfig } from '../config';
-import { useIsSignedIn } from '../hooks';
+import firebase from '../services/firebase';
+import firebaseAuthConfig from '../config/firebaseAuthConfig';
+import useIsSignedIn from '../hooks/useIsSignedIn';
 
 export default function HomePage() {
   const { isSignedIn } = useIsSignedIn();
@@ -17,7 +17,7 @@ export default function HomePage() {
         </div>
       ) : (
         <StyledFirebaseAuth
-          uiConfig={firebaseUiConfig}
+          uiConfig={firebaseAuthConfig}
           firebaseAuth={firebase.auth()}
         />
       )}
